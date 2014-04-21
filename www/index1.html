@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Заголовок</title>
+	<meta name="description" content="<?php Core_Page::instance()->showDescription()?>" />
+	<meta name="keywords" content="<?php Core_Page::instance()->showKeywords()?>" />
+	<meta content="text/html; charset=<?php echo SITE_CODING?>" http-equiv="Content-Type" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!--<?php Core_Page::instance()->showCss()?>-->
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+	<!--<?php Core_Browser::check()?>-->
+	<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+	<meta content='width=998, maximum-scale=1' name='viewport' />
+
+	<link rel="icon" href="/favi.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/favi.ico" type="image/x-icon" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/news/rss/" />
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="/hostcmsfiles/jquery/jquery.js"></script>
+	
+	<!-- validate -->
+	<script type="text/javascript" src="/hostcmsfiles/jquery/jquery.validate.js"></script>
+
+	<script type="text/javascript" src="/templates/template1/hostcms.js"></script>
+	
+	<!-- Подключение скрипта Z-Accordion -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="/js/jquery.zaccordion.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#example4 ul").zAccordion({
+				slideWidth: 300,
+				width: 703,
+				height: 502,
+				timeout: 3000,
+				slideClass: "frame"
+			});
+		});
+	</script>
+
+	<!-- Слайдер-баннер -->
+	<!--<script src="/js/jquery-1.4.4.min.js"></script>-->
+	<script src="/js/slides.min.jquery.js"></script>
+	<script src="/js/jquery.placeholder.js"></script>
+	<script>
+		$(function(){
+			$('input, textarea').placeholder();
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				play: 3000,
+				pause: 2500,
+				hoverPause: true,
+				animationStart: function(){
+					$('.caption').animate({
+						bottom:-35
+					},100);
+				},
+				animationComplete: function(current){
+					$('.caption').animate({
+						bottom:0
+					},200);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log(current);
+					};
+				}
+			});
+		});
+	</script>
+	
+	<!-- При наведении на слайд -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".img_ban").mouseenter(function(){
+				if($(".block4").is(':hidden')){
+					$(".block4").stop().animate({width:"show"},0);
+					//$(".pagination").animate({width:"hide"},0);
+					$(".slides_container").css({"width":"938px", "height":"502px"});
+					$(".block1").stop().animate({width:"show"},100);
+					$(".block2").stop().animate({width:"show"},100);
+				}
+			}).dequeue();
+			$(".block1").mouseleave(function(){
+				if($(".block4").is(':visible')){
+					$(".block1").stop().animate({width:"hide"},0);
+					$(".slides_container").stop().animate({"width":"233px", "height":"502px"});
+					//$(".pagination").animate({width:"show"},0);
+					$(".block4").delay(500).animate({width:"hide"},0);
+				}
+			}).dequeue();
+		  });
+	</script>
+
+	<!-- Карусель Новостей -->
+	<script src="/js/jcarousellite.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $("a.new_window").attr("target", "_blank");
+		  //carousel
+		  $(".carousel").jCarouselLite({
+			  btnNext: ".next",
+			  btnPrev: ".prev"
+		  });
+		});
+	</script>
+
+	<!-- Обработчик Галереи "Портфолио" -->
+	<script src="/js/smart-gallery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $('#smart-gallery, #smart-gallery-2, #smart-gallery-3, #smart-gallery-4, #smart-gallery-5, #smart-gallery-6, #smart-gallery-7, #smart-gallery-8').gallery({ stickthumbnails: true, random: true});
+        });
+    </script>
+	
+    <style type="text/css">
+        #contributor
+        {
+            color: Gray;
+            margin: 0;
+            padding: 0;
+            margin-top: 4px;
+            text-align: center;
+        }
+        #contributor a
+        {
+            color: Gray;
+        }
+    </style>
+
+	<!-- jQuery Reveal - pop-up окно -->
+	<script type="text/javascript" src="/hostcmsfiles/jquery/reveal/jquery.reveal.js"></script>
+	<link rel="stylesheet" type="text/css" href="/hostcmsfiles/jquery/reveal/reveal.css" />
+
+</head>
+	<body>
+		<div id="header">
+			<div class="logotip">
+				<a href="/">
+					<img src="/images/logo.png" style="width:189px; height:82px;" alt="" />
+					<p>Expanding your nature</p>
+				</a>
+			</div>
+			<div class="title">
+				<h1>SOUL <br /> DESIRE </h1>
+				<span>photo and beauty <br />project</span>
+			</div>
+			<div class="slogan"><img src="/images/kav_l.png" style="float:left; margin-right:0px; margin-bottom:100px; margin-top:0px; height: 14px;" width="10px;">Древняя легенда гласит: если сложить из бумаги 1000 журавликов, заветное желание сбудется. Секрет состоит в том, чтобы дарить сложенные фигурки другим, в ответ получая теплые улыбки.. Энергия этих людей исполнит Ваше желание!<img src="/images/kav_r.png" style="margin-left:-1px; position: relative; top: 5px;" width="10px;"></div>
+			<div class="contact">+ 7 910 492 40 10 <br />info@souldesire.ru</div>
+		</div>
+		<div id="content">
+			<div id="example">
+			
+			<!--<a class="img_ban1" href="#"><img src="/images/banner1.png" width="233" height="502" /></a>-->
+			
+				<!-- <img src="img/new-ribbon.png" width="112" height="112" alt="New Ribbon" id="ribbon"> -->
+				<div id="slides">
+					<div class="slides_container">
+						<div>
+							<a href="#" class="img_ban" title="Happy"><img src="/images/banner1.png" width="233" height="502" alt="Slide 1" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+							<div class="block4" style="width:260px; height:522px; z-index:1000; display:none; position:absolute; top:-10px; left:-10px;"><img src="/images/prokladka.png" width="240px" height="522px" /></div>
+							<div class="block1" style="width:938px; height:502px; z-index:99999; display:none; position:absolute; top:0px;">
+									<div id="example4" style="z-index:99999;">
+										<ul style="z-index:99999; float:left;">
+											<li class="frame-0" style="background:url(/images/banner1-big.png) top left repeat;">
+												<!--<div class="frame-content">
+													<h3>Lorem ipsum dolor sit</h3>
+													<p>Vivamus vel neque nec est hendrerit aliquet. Donec sed cursus sapien. Aenean auctor egestas turpis nec aliquam.</p>
+												</div>-->
+											</li>
+											<li class="frame-1" style="background:url(/images/banner3-big.png) top left repeat;">
+												<!--<div class="frame-content">
+													<h3>Donec a elit nisi</h3>
+													<p>Proin sit amet massa vel elit pulvinar hendrerit eu nec odio. Maecenas faucibus odio sit amet nunc semper accumsan.</p>
+												</div>-->
+											</li>
+											<li class="frame-2" style="background:url(/images/banner4-big.png) top left repeat;">
+												<!--<div class="frame-content">
+													<h3>Duis vitae suscipit neque</h3>
+													<p>Nunc porta commodo dolor, in vestibulum neque ullamcorper non. Nunc elementum ante in metus mollis sit amet consequat justo facilisis.</p>
+												</div>-->
+											</li>
+											<!--
+											<li class="frame-3" style="background:url(/images/zaccordion/slide3.gif) top left repeat;">
+												<div class="frame-content">
+													<h3>Sed a scelerisque lorem</h3>
+													<p>Phasellus non ante in lectus eleifend scelerisque ut eget velit.</p>
+												</div>
+											</li>
+											-->
+										</ul>
+										<div style="background-color: rgb(88, 88, 90); float:right; height: 502px; width: 235px; margin-top:16px;">
+											<div class="frame-content2">Вид съемки: заоблачный<br />Цена: 5555руб.<br /><a href="/portfolio/">подробнее</a></div>
+										</div>
+									</div>		
+							</div>
+						</div>
+						<div>
+							<a href="#" class="img_ban" title="Happy"><img src="/images/banner1.png" width="233" height="502" alt="Slide 1" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+							<div class="block4" style="width:260px; height:522px; z-index:1000; display:none; position:absolute; top:-10px; left:-10px;"><img src="/images/prokladka.png" width="240px" height="522px" /></div>
+							<div class="block1" style="width:938px; height:502px; z-index:99999; display:none; position:absolute; top:0px;">
+								<a href="#" class="img_ban1"><img src="/images/banner1-big.png" width="938" height="502" style="z-index:600;" /><div class="block3">Cделай фотосессию на <br />природе до конца <br />июня, получи в <br />подарок - прогулку на <br />яхте этим летом!</div></a>
+							</div>
+						</div>
+						<div>
+							<a href="#" class="img_ban" title="Happy"><img src="/images/banner1.png" width="233" height="502" alt="Slide 1" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+							<div class="block4" style="width:260px; height:522px; z-index:1000; display:none; position:absolute; top:-10px; left:-10px;"><img src="/images/prokladka.png" width="240px" height="522px" /></div>
+							<div class="block1" style="width:938px; height:502px; z-index:99999; display:none; position:absolute; top:0px;">
+								<a href="#" class="img_ban1"><img src="/images/banner1-big.png" width="938" height="502" /></a>
+							</div>
+						</div>
+						<div>
+							<a href="#" class="img_ban" title="Happy"><img src="/images/banner1.png" width="233" height="502" alt="Slide 1" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+							<div class="block4" style="width:260px; height:522px; z-index:1000; display:none; position:absolute; top:-10px; left:-10px;"><img src="/images/prokladka.png" width="240px" height="522px" /></div>
+							<div class="block1" style="width:938px; height:502px; z-index:99999; display:none; position:absolute; top:0px;">
+								<a href="#" class="img_ban1"><img src="/images/banner1-big.png" width="938" height="502" /></a>
+							</div>
+						</div>
+						<div>
+							<a href="#" class="img_ban" title="Happy"><img src="/images/banner1.png" width="233" height="502" alt="Slide 1" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+							<div class="block4" style="width:260px; height:522px; z-index:1000; display:none; position:absolute; top:-10px; left:-10px;"><img src="/images/prokladka.png" width="240px" height="522px" /></div>
+							<div class="block1" style="width:938px; height:502px; z-index:99999; display:none; position:absolute; top:0px;">
+								<a href="#" class="img_ban1"><img src="/images/banner1-big.png" width="938" height="502" /></a>
+							</div>
+						</div>
+						<div>
+							<a href="#" class="img_ban" title="Happy"><img src="/images/banner1.png" width="233" height="502" alt="Slide 1" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+							<div class="block4" style="width:260px; height:522px; z-index:1000; display:none; position:absolute; top:-10px; left:-10px;"><img src="/images/prokladka.png" width="240px" height="522px" /></div>
+							<div class="block1" style="width:938px; height:502px; z-index:99999; display:none; position:absolute; top:0px;">
+								<a href="#" class="img_ban1"><img src="/images/banner1-big.png" width="938" height="502" /></a>
+							</div>
+						</div>
+						<div>
+							<a href="#" class="img_ban" title="Happy"><img src="/images/banner1.png" width="233" height="502" alt="Slide 1" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+							<div class="block4" style="width:260px; height:522px; z-index:1000; display:none; position:absolute; top:-10px; left:-10px;"><img src="/images/prokladka.png" width="240px" height="522px" /></div>
+							<div class="block1" style="width:938px; height:502px; z-index:99999; display:none; position:absolute; top:0px;">
+								<a href="#" class="img_ban1"><img src="/images/banner1-big.png" width="938" height="502" /></a>
+							</div>
+						</div>
+					</div>
+					<!--
+					<a href="#" class="prev"><img src="img/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+					<a href="#" class="next"><img src="img/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+					-->
+				</div>
+				<!-- <img src="img/example-frame.png" width="739" height="341" alt="Example Frame" id="frame">	-->
+			
+			</div>
+			<div id="nav">
+				<ul class="menu">
+					<li><a href="#"><div class="we">Мы</div></a></li>
+					<li><a href="#"><div class="friends">Друзья</div></a></li>
+					<li><a href="#"><div class="portfolio">Портфолио</div></a></li>
+					<li><a href="#"><div class="beauty">Красота</div></a></li>
+					<li><a href="#"><div class="cost">Стоимость</div></a></li>
+					<li><a href="#"><div class="project">Проекты</div></a></li>
+				</ul>
+			</div>
+			<div id="sidebar">
+				<h2>Я хочу:</h2>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$("#photo_da").change(function(){
+							$(this).parent().toggleClass('checked');
+						});
+					 });
+				</script>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$("#nayti").change(function(){
+							$(this).parent().toggleClass('checked');
+						});
+					 });
+				</script>
+				<form id="form" action="/mail.php" method="post">
+					<input name="event" value="sviaz" type="hidden" />
+					<fieldset>
+						<legend>Форма обратной связи</legend>
+						<p style="margin-top:15px; margin-left:0px; margin-bottom:20px; width:74px;"><label for="photo_da"><input name="photo_da" id="photo_da" value="1" type="checkbox" style="visibility:hidden; position:absolute;">Фотографии</label></p>
+						<p style="margin-top:15px; margin-left:0px; margin-bottom:20px; width:66px;"><label for="nayti"><input name="nayti" id="nayti" value="1" type="checkbox" style="visibility:hidden; position:absolute;">Найти себя</label></p>
+						<p><label for="name">Имя<br />
+						<input name="name" id="name" size="30" type="text" required /></label></p>
+						<!--<div class="line-punktir">&nbsp;</div>-->
+						<p><label for="tel">Телефон<br />
+						<input name="tel" id="tel" size="30" type="tel" placeholder="adadga" required /></label></p>
+						<!--<div class="line-punktir">&nbsp;</div>-->
+						<p><label for="email">E-mail<br />
+						<input name="email" id="email" size="30" type="email" required autofocus /></label></p>
+						<!--<div class="line-punktir">&nbsp;</div>-->
+						<p><label for="message">Комментарий<br /><textarea name="message" id="message" cols="10" rows="5"></textarea></label></p>
+					</fieldset>
+					<button type="submit">Отправить</button>
+					<p class="soglasie"><label for="soglasie"><input name="soglasie" value="1" id="soglasie" type="checkbox">Соглашаюсь на рассылку</label></p>
+				</form>
+			</div>
+			<div style="clear:both;"></div>
+			<div id="news">
+			
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$(".hider").click(function(){
+							$("#hidden").slideToggle("slow");
+							return false;
+						});
+					});
+				</script>
+				<!--
+				<div class="zagolovok">
+					<h2>Новости</h2>
+					<a href="#"><img src="/images/strelka-down.png" style="width:21px; height:14px; margin-top:27px;" /></a>
+				</div>
+				-->
+
+				<h2 class="hider">Новости</h2><img src="/images/strelka-down.png" style="width:21px; height:14px; margin-top:26px; margin-left:8px;" /><div style="clear:both;"></div>
+				<div class="carousel-box">
+					<div class="prev"><a href="#"><img src="/images/strelka-left.png" alt="" /></a></div>
+					<div class="next"><a href="#"><img src="/images/strelka-right.png" alt="" /></a></div>
+						<div class="carousel">
+							<ul>
+								<li>
+									<div class="nad">
+										<a href="#"><img src="/images/preview-photo.png" /></a>
+										<p class="inner"><a href="#">Существует метафорическое представление о тексте, как о лабиринте, в котором блуждают его</a></p>
+									</div>
+									<div class="pod">
+										<a href="#"><img src="/images/preview-photo.png" /></a>
+										<p class="inner"><a href="#">Существует метафорическое представление о тексте, как о лабиринте, в котором блуждают его</a></p>
+									</div>
+								</li>
+								<li>
+									<div class="nad">
+										<a href="#"><img src="/images/preview-photo.png" /></a>
+										<p class="inner"><a href="#">Существует метафорическое представление о тексте, как о лабиринте, в котором блуждают его</a></p>
+									</div>
+									<div class="pod">
+										<a href="#"><img src="/images/preview-photo.png" /></a>
+										<p class="inner"><a href="#">Существует метафорическое представление о тексте, как о лабиринте, в котором блуждают его</a></p>
+									</div>
+								</li>
+								<li>
+									<div class="nad">
+										<a href="#"><img src="/images/preview-photo.png" /></a>
+										<p class="inner"><a href="#">Существует метафорическое представление о тексте, как о лабиринте, в котором блуждают его</a></p>
+									</div>
+									<div class="pod">
+										<a href="#"><img src="/images/preview-photo.png" /></a>
+										<p class="inner"><a href="#">Существует метафорическое представление о тексте, как о лабиринте, в котором блуждают его</a></p>
+									</div>
+								</li>
+								<li>
+									<div class="nad">
+										<a href="#"><img src="/images/preview-photo.png" /></a>
+										<p class="inner"><a href="#">Существует метафорическое представление о тексте, как о лабиринте, в котором блуждают его</a></p>
+									</div>
+									<div class="pod">
+										<a href="#"><img src="/images/preview-photo.png" /></a>
+										<p class="inner"><a href="#">Существует метафорическое представление о тексте, как о лабиринте, в котором блуждают его</a></p>
+									</div>
+								</li>
+								<li>
+									<div class="nad">
+										<a href="#"><img src="/images/preview-photo.png" /></a>
+										<p class="inner"><a href="#">Существует метафорическое представление о тексте, как о лабиринте, в котором блуждают его</a></p>
+									</div>
+									<div class="pod">
+										<a href="#"><img src="/images/preview-photo.png" /></a>
+										<p class="inner"><a href="#">Существует метафорическое представление о тексте, как о лабиринте, в котором блуждают его</a></p>
+									</div>
+								</li>
+							</ul>
+						</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

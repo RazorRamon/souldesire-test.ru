@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta name="description" content="<?php Core_Page::instance()->showDescription()?>" />
+		<meta name="keywords" content="<?php Core_Page::instance()->showKeywords()?>" />
+		<meta content="text/html; charset=<?php echo SITE_CODING?>" http-equiv="Content-Type" />
+		<!--<?php Core_Page::instance()->showCss()?>-->
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link rel="icon" href="/favi.ico" type="image/x-icon"></link>
+		<link rel="shortcut icon" href="/favi.ico" type="image/x-icon"></link>
+		
+		<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+		<meta content='width=998, maximum-scale=1' name='viewport' />
+		
+		<script type="text/javascript" src="/templates/template1/hostcms.js"></script>
+		<script type="text/javascript" src="/hostcmsfiles/ajax/JsHttpRequest.js"></script>
+		<script type="text/javascript" src="/hostcmsfiles/ajax/ajax.js"></script>
+		<script src="/hostcmsfiles/main.js" type="text/javascript"></script>
+		
+		<script src="/js/jquery-1.4.4.min.js"></script>
+		<script src="/js/slides.min.jquery.js"></script>
+		<script src="/js/jquery.placeholder.js"></script>
+		<script>
+			$('input, textarea').placeholder();
+			$(function(){
+				$('#slides').slides({
+					preload: true,
+					preloadImage: 'img/loading.gif',
+					play: 5000,
+					pause: 2500,
+					hoverPause: true,
+					animationStart: function(){
+						$('.caption').animate({
+							bottom:-35
+						},100);
+					},
+					animationComplete: function(current){
+						$('.caption').animate({
+							bottom:0
+						},200);
+						if (window.console && console.log) {
+							// example return of current slide number
+							console.log(current);
+						};
+					}
+				});
+			});
+		</script>
+		<script src="/js/jcarousellite.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  $("a.new_window").attr("target", "_blank");
+			  //carousel
+			  $(".carousel").jCarouselLite({
+				  btnNext: ".next",
+				  btnPrev: ".prev"
+			  });
+			});
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="logotip">
+				<a href="/">
+					<img src="/images/logo.png" style="width:189px; height:82px;" alt="" />
+					<p>Expanding your nature</p>
+				</a>
+			</div>
+			<div class="title">
+				<h1>SOUL <br /> DESIRE </h1>
+				<span>photo and beauty <br />project</span>
+			</div>
+			<!--
+			<div class="slogan">"Древняя легенда гласит: если сложить из бумаги 1000 журавликов, заветное желание сбудется. Секрет состоит в том, чтобы дарить сложенные фигурки другим, в ответ получая теплые улыбки.. Энергия этих людей исполнит Ваше желание!"</div>
+			<div class="contact">+ 7 910 492 40 10 <br />info@souldesire.ru</div>
+			-->
+			<div class="logo_friends">Друзья</div>
+		</div>
+		<div id="content">
+			<div id="example">
+				<!--<img src="img/new-ribbon.png" width="112" height="112" alt="New Ribbon" id="ribbon">-->
+				<div id="slides">
+					<div class="slides_container">
+						<div>
+							<a href="#" title="Happy" target="_blank"><img src="/images/banner1.png" width="233" height="502" alt="Slide 1" /></a>
+							<div class="caption" style="bottom:0">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+						</div>
+						<div>
+							<a href="#" title="Taxi" target="_blank"><img src="/images/banner1.png" width="233" height="502" alt="Slide 2" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+						</div>
+						<div>
+							<a href="#" title="Happy" target="_blank"><img src="/images/banner1.png" width="233" height="502" alt="Slide 3" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+						</div>
+						<div>
+							<a href="#" title="We" target="_blank"><img src="/images/banner1.png" width="233" height="502" alt="Slide 4" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+						</div>
+						<div>
+							<a href="#" title="Flickr" target="_blank"><img src="/images/banner1.png" width="233" height="502" alt="Slide 5" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+						</div>
+						<div>
+							<a href="#" title="twelve" target="_blank"><img src="/images/banner1.png" width="233" height="502" alt="Slide 6" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+						</div>
+						<div>
+							<a href="#" title="Save" target="_blank"><img src="/images/banner1.png" width="233" height="502" alt="Slide 7" /></a>
+							<div class="caption">
+								<p>Cделай фотосессию на природе до конца июня, получи в подарок - прогулку на яхте этим летом!</p>
+							</div>
+						</div>
+					</div>
+					<!--<a href="#" class="prev"><img src="img/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+					<a href="#" class="next"><img src="img/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>-->
+				</div>
+				<!--<img src="img/example-frame.png" width="739" height="341" alt="Example Frame" id="frame">-->
+			</div>
+			<div id="nav">
+				<div class="post">
+					<div class="tsitata">
+					<img src="/images/kav_l.png" style="float:left; margin-right:2px; margin-bottom:150px; margin-top:5px;" width="17" height="24">Каждый человек, встречающийся на пути – особенный и не случайный.  Эти люди делают свою работу качественно, и полностью отдаются своему делу с полной силой и любовью.
+						<img src="/images/kav_r.png" style="margin-left:-12px; margin-bottom:8px;" width="17" height="24"></div>
+				</div>
+			</div>
+			<div id="sidebar">
+				<ul class="menu_right_2">
+					<li><a href="#">Мы</a></li>
+					<li><a href="#">Друзья</a></li>
+					<li><a href="#">Портфолио</a></li>
+					<li><a href="#">Красота</a></li>
+					<li><a href="#">Стоимость</a></li>
+					<li class="last"><a href="#">Проекты</a></li>
+				</ul>
+			</div>
+			
+			<div id="friends">
+				<div class="friend">
+					<div class="img_mesto">
+						<h3>Имя Фамилия</h3>
+						<div  style="background: url('/images/mesta_foto1-mini.jpg') 0% 0px no-repeat;"><a href="#"><img src="/images/nakladka_mesta.png" width="244" height="244" /></a></div>
+					</div>
+					<div class="anons">Древняя легенда гласит: если сложитьиз бумаги 1000 журавликов, заветное желание сбудется. 
+Секрет состоит в том, чтобы складывать фигурки для других и дарить их окружающим, в ответ 
+получая теплые улыбки.. Энергия этих людей исполнит Ваше желание!</div>
+					<a href="#" class="podr">Контакт</a>
+					<div style="clear:both;"></div>
+				</div>
+				<div class="friend">
+					<div class="img_mesto">
+						<h3>Имя Фамилия</h3>
+						<div  style="background: url('/images/mesta_foto1-mini.jpg') 0% 0px no-repeat;"><a href="#"><img src="/images/nakladka_mesta.png" width="244" height="244" /></a></div>
+					</div>
+					<div class="anons">Древняя легенда гласит: если сложитьиз бумаги 1000 журавликов, заветное желание сбудется. 
+Секрет состоит в том, чтобы складывать фигурки для других и дарить их окружающим, в ответ 
+получая теплые улыбки.. Энергия этих людей исполнит Ваше желание!</div>
+					<a href="#" class="podr">Контакт</a>
+					<div style="clear:both;"></div>
+				</div>
+
+				<script type="text/javascript">// <![CDATA[
+				qwstArr = new Array();
+				function showHelp(id){
+				$('#qw' + id).delay(200).slideToggle();
+				if(!qwstArr[id]){
+				$('#qwb' + id).delay(200).slideToggle();
+				qwstArr[id] = true;
+				}else {
+				$('#qwb' + id).delay(200).slideToggle();
+				qwstArr[id] = false;
+				}
+				}
+				// ]]></script>
+				<script type="text/javascript">// <![CDATA[
+				qwstArr[1] = false;
+				// ]]></script>
+				<a id="qwb1" onclick="showHelp(1)" style="cursor: pointer;"><h2>Показать ещё</h2><img src="/images/strelka-down.png" style="width:21px; height:14px; margin-top:26px; margin-left:8px;" /></a>
+				<div id="qw1" style="display: none;">
+				<div>
+					<div class="friend">
+						<div class="img_mesto">
+							<h3>Имя Фамилия</h3>
+							<div  style="background: url('/images/mesta_foto1-mini.jpg') 0% 0px no-repeat;"><a href="#"><img src="/images/nakladka_mesta.png" width="244" height="244" /></a></div>
+						</div>
+						<div class="anons">Древняя легенда гласит: если сложитьиз бумаги 1000 журавликов, заветное желание сбудется. 
+	Секрет состоит в том, чтобы складывать фигурки для других и дарить их окружающим, в ответ 
+	получая теплые улыбки.. Энергия этих людей исполнит Ваше желание!</div>
+						<a href="#" class="podr">Контакт</a>
+						<div style="clear:both;"></div>
+					</div>
+					<div class="friend">
+						<div class="img_mesto">
+							<h3>Имя Фамилия</h3>
+							<div  style="background: url('/images/mesta_foto1-mini.jpg') 0% 0px no-repeat;"><a href="#"><img src="/images/nakladka_mesta.png" width="244" height="244" /></a></div>
+						</div>
+						<div class="anons">Древняя легенда гласит: если сложитьиз бумаги 1000 журавликов, заветное желание сбудется. 
+	Секрет состоит в том, чтобы складывать фигурки для других и дарить их окружающим, в ответ 
+	получая теплые улыбки.. Энергия этих людей исполнит Ваше желание!</div>
+						<a href="#" class="podr">Контакт</a>
+						<div style="clear:both;"></div>
+					</div>
+				</div>
+				<div onclick="showHelp(1)" style="padding-bottom: 8px; cursor: pointer;"><h2>Скрыть</h2><img src="/images/strelka-up.png" style="width:21px; height:14px; margin-top:26px; margin-left:8px;" /></div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
